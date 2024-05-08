@@ -11,26 +11,19 @@ from VIPMUSIC.core.mongo import mongodb, pymongodb
 
 AUTO_GCAST = True
 
-START_IMG_URLS = "https://graph.org/file/760169f7f8dd536c50793.jpg"
+START_IMG_URLS = "https://graph.org/file/2014271ca39345f83024b.jpg"
 
 MESSAGES = f"""**ㅤㅤㅤ⚠️⚠️⚠️⚠️⚠️📡
 
-❤️सबसे ज्यादा पैसा देने वाला Platform पूरी दुनिया को हिला के रख दिया MISS मत करना⭐️
+THANKS FOR USING AUJLA BOTS.
 
-✅Game  को INVITE करो और 10,000₹ से 50,000₹ रोज कमाओ
-
-🫂Link:- https://91club.game/#/register?invitationCode=65847105926 ✅
-
-**"""
+☄️Group Link🔗:- https://t.me/Punjab_Haryana_Himachal**"""
 
 
 BUTTONS = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(
-                "๏ Click & Get ₹100 ๏",
-                url=f"https://91club.game/#/register?invitationCode=65847105926",
-            )
+            InlineKeyboardButton("๏ Click & Get ๏", url=f"https://t.me/Punjab_Haryana_Himachal")
         ]
     ]
 )
@@ -41,16 +34,16 @@ MESSAGE = f"""**๏ ᴛʜɪs ɪs ᴀᴅᴠᴀɴᴄᴇᴅ ᴍᴜsɪᴄ ᴘʟᴀʏ
 
 ➥ sᴜᴘᴘᴏʀᴛᴇᴅ ᴡᴇʟᴄᴏᴍᴇ - ʟᴇғᴛ ɴᴏᴛɪᴄᴇ, ᴛᴀɢᴀʟʟ, ᴠᴄᴛᴀɢ, ʙᴀɴ - ᴍᴜᴛᴇ, sʜᴀʏʀɪ, ʟᴜʀɪᴄs, sᴏɴɢ - ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅ, ᴇᴛᴄ... ❤️
 
-🔐ᴜꜱᴇ » [/start](https://t.me/TG_VC_BOT?start=help) ᴛᴏ ᴄʜᴇᴄᴋ ʙᴏᴛ
+🔐ᴜꜱᴇ » [/start](https://t.me/Navneet_Robot?start=help) ᴛᴏ ᴄʜᴇᴄᴋ ʙᴏᴛ
 
-➲ ʙᴏᴛ :** @TG_VC_BOT"""
+➲ ʙᴏᴛ :** @Navneet_Robot"""
 
 BUTTON = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
                 "๏ ᴋɪᴅɴᴀᴘ ᴍᴇ ๏",
-                url=f"https://t.me/TG_VC_BOT?startgroup=s&admin=delete_messages+manage_video_chats+pin_messages+invite_users",
+                url=f"https://t.me/Navneet_Robot?startgroup=s&admin=delete_messages+manage_video_chats+pin_messages+invite_users",
             )
         ]
     ]
