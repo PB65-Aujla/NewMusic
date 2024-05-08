@@ -23,7 +23,7 @@ SPAM_THRESHOLD = 2
 SPAM_WINDOW_SECONDS = 5
 
 
-@Client.on_message(filters.command(["help"]) & filters.private & ~BANNED_USERS)
+@Client.on_message(filters.command(["mhelp"]) & filters.private & ~BANNED_USERS)
 @Client.on_callback_query(filters.regex("settings_back_helper") & ~BANNED_USERS)
 async def helper_private(
     client: app, update: Union[types.Message, types.CallbackQuery]
@@ -57,7 +57,7 @@ async def helper_private(
         )
 
 
-@Client.on_message(filters.command(["help"]) & filters.group & ~BANNED_USERS)
+@Client.on_message(filters.command(["mhelp"]) & filters.group & ~BANNED_USERS)
 @LanguageStart
 async def help_com_group(client, message: Message, _):
     user_id = message.from_user.id
@@ -95,7 +95,7 @@ async def helper_cb(client, CallbackQuery, _):
     if cb == "hb9":
         if CallbackQuery.from_user.id not in SUDOERS:
             return await CallbackQuery.answer(
-                "😎𝗣𝗔𝗛𝗟𝗘 𓆩𝗩𝗜𝗣𓆪 𝗞𝗢 𝗣𝗔𝗣𝗔 𝗕𝗢𝗟 𝗝𝗔𝗞𝗘 😆😆", show_alert=True
+                "😎 CONTACT @PB65_Aujla😆😆", show_alert=True
             )
         else:
             await CallbackQuery.edit_message_text(helpers.HELP_9, reply_markup=keyboard)
