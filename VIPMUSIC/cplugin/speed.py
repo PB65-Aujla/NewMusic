@@ -20,6 +20,7 @@ checker = []
 )
 @AdminRightsCheck
 async def playback(client, message: Message, _, chat_id):
+    cname = (await client.get_me()).mention
     playing = db.get(chat_id)
     if not playing:
         return await client.send_message(message.chat.id, text=_["queue_2"])
@@ -32,7 +33,7 @@ async def playback(client, message: Message, _, chat_id):
     upl = speed_markup(_, chat_id)
     return await client.send_message(
         message.chat.id,
-        text=_["admin_28"].format(app.mention),
+        text=_["admin_28"].format(cname),
         reply_markup=upl,
     )
 
@@ -105,4 +106,4 @@ async def del_back_playlist(client, callback_query, _):
         callback_query.message.chat.id,
         text=_["admin_34"].format(speed, callback_query.from_user.mention),
         reply_markup=close_markup(_),
-    )
+            )
