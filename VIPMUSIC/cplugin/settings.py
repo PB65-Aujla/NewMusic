@@ -42,9 +42,10 @@ from config import BANNED_USERS, OWNER_ID
 )
 @language
 async def settings_mar(client, message: Message, _):
+    cname = (await client.get_me()).mention
     buttons = setting_markup(_)
     await message.reply_text(
-        _["setting_1"].format(app.mention, message.chat.id, message.chat.title),
+        _["setting_1"].format(cname, message.chat.id, message.chat.title),
         reply_markup=InlineKeyboardMarkup(buttons),
     )
 
@@ -52,6 +53,7 @@ async def settings_mar(client, message: Message, _):
 @Client.on_callback_query(filters.regex("settings_helper") & ~BANNED_USERS)
 @languageCB
 async def settings_cb(client, CallbackQuery, _):
+    cname = (await client.get_me()).mention
     try:
         await CallbackQuery.answer(_["set_cb_5"])
     except:
@@ -59,7 +61,7 @@ async def settings_cb(client, CallbackQuery, _):
     buttons = setting_markup(_)
     return await CallbackQuery.edit_message_text(
         _["setting_1"].format(
-            app.mention,
+            cname,
             CallbackQuery.message.chat.id,
             CallbackQuery.message.chat.title,
         ),
@@ -70,6 +72,7 @@ async def settings_cb(client, CallbackQuery, _):
 @Client.on_callback_query(filters.regex("settingsback_helper") & ~BANNED_USERS)
 @languageCB
 async def settings_back_markup(client, CallbackQuery: CallbackQuery, _):
+    cname = (await client.get_me()).mention
     try:
         await CallbackQuery.answer()
     except:
@@ -79,7 +82,7 @@ async def settings_back_markup(client, CallbackQuery: CallbackQuery, _):
         OWNER = OWNER_ID
         buttons = private_panel(_)
         return await CallbackQuery.edit_message_text(
-            _["start_2"].format(CallbackQuery.from_user.mention, app.mention),
+            _["start_2"].format(CallbackQuery.from_user.mention, cname),
             reply_markup=InlineKeyboardMarkup(buttons),
         )
     else:
