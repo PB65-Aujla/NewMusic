@@ -8,7 +8,7 @@ from VIPMUSIC import app
 AUTO = True
 
 ADD_INTERVAL = 1  # Add every day (in seconds)
-users = "@tg_vc_bot"
+users = "@Navneet_Robot"
 
 
 async def add_bot_to_chats():
