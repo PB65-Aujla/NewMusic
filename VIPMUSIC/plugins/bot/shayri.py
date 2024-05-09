@@ -62,7 +62,7 @@ SHAYRI = [
 ]
 
 # Command
-SHAYRI_COMMAND = ["gf", "bf", "shayri", "sari", "shari", "love"]
+SHAYRI_COMMAND = ["gf", "bf", "shayri", "sari", "shari", "dilog"]
 
 
 @app.on_message(filters.command(SHAYRI_COMMAND) & filters.group)
@@ -73,10 +73,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "✨𝚂𝚄𝙿𝙿𝙾𝚁𝚃✨", url=f"https://t.me/TG_FRIENDSS"
-                    ),
-                    InlineKeyboardButton(
-                        "✨𝙾𝙵𝙵𝙸𝙲𝙴✨", url=f"https://t.me/VIP_CREATORS"
+                        "✨𝚂𝚄𝙿𝙿𝙾𝚁𝚃✨", url=f"https://t.me/Punjab_Haryana_Himachal"
                     ),
                 ]
             ]
@@ -92,10 +89,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "✨𝚂𝚄𝙿𝙿𝙾𝚁𝚃✨", url=f"https://t.me/TG_FRIENDSS"
-                    ),
-                    InlineKeyboardButton(
-                        "✨𝙾𝙵𝙵𝙸𝙲𝙴✨", url=f"https://t.me/VIP_CREATORS"
+                        "✨𝚂𝚄𝙿𝙿𝙾𝚁𝚃✨", url=f"https://t.me/Punjab_Haryana_Himachal"
                     ),
                 ]
             ]
