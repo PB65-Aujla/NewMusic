@@ -5,7 +5,6 @@ from pyrogram import Client
 from VIPMUSIC import app
 from VIPMUSIC.misc import SUDOERS
 
-
 # Define the spam command handler
 @app.on_message(filters.command("raid", prefixes=".") & SUDOERS)
 def spam_command(client, message):
