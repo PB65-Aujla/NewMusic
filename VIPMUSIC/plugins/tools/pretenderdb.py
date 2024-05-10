@@ -7,7 +7,7 @@ mongo = MongoCli(MONGO_DB_URI).Rankings
 
 impdb = mongo.pretender
 
- 
+
 async def usr_data(user_id: int) -> bool:
     user = await impdb.find_one({"user_id": user_id})
     return bool(user)
@@ -31,6 +31,7 @@ async def add_userdata(user_id: int, username, first_name, last_name):
         upsert=True,
     )
 
+
 async def check_pretender(chat_id: int) -> bool:
     chat = await impdb.find_one({"chat_id_toggle": chat_id})
     return bool(chat)
@@ -42,4 +43,3 @@ async def impo_on(chat_id: int) -> bool:
 
 async def impo_off(chat_id: int):
     await impdb.delete_one({"chat_id_toggle": chat_id})
-  

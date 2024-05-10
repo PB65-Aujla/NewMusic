@@ -23,7 +23,9 @@ THANKS FOR USING AUJLA BOTS.
 BUTTONS = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton("๏ Click & Get ๏", url=f"https://t.me/Punjab_Haryana_Himachal")
+            InlineKeyboardButton(
+                "๏ Click & Get ๏", url=f"https://t.me/Punjab_Haryana_Himachal"
+            )
         ]
     ]
 )

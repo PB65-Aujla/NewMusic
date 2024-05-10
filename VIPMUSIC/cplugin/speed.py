@@ -106,4 +106,4 @@ async def del_back_playlist(client, callback_query, _):
         callback_query.message.chat.id,
         text=_["admin_34"].format(speed, callback_query.from_user.mention),
         reply_markup=close_markup(_),
-            )
+    )
